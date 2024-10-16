@@ -8,36 +8,36 @@ zero (world): {
 
 joint1(zero):{
     joint: hingeX,
-    pre:"T t(0 0 0.3)" 
+    pre:"T t(0 0 0)" 
 }
 
 link1 (joint1): {
     shape: capsule, size: [1, 0.05],
     color: [0.0, 0.0, 1.0],
-    Q: [0.0, 0.0, 0.2]
+    Q: [0.0, 0.0, 0.5]
 }
 
 joint2(link1):{
     joint: hingeX,
-    pre:"T t(0 0.0 .85)"
+    pre:"T t(0 0.0 .5)"
 
 }
 
 link2 (joint2): {
     shape: capsule, size: [1, 0.05],
     color: [1.0, 0.0, 0.0],
-    Q: [0.0, 0.0, 0.15]
+    Q: [0.0, 0.0, 0.5]
 }
 
 joint3 (link2): {
     joint: hingeX,
-    pre:"T t(0 0.0 .52)",
+    pre:"T t(0 0.0 .5)",
 }
 
 end-effector (joint3): {
     shape: sphere, size: [0.06],
     color: [0.0, 1.0, 0.0],
-    Q: [0.0, 0.0, 0.03]
+    Q: [0.0, 0.0, 0.06]
 }
 
 target: {
